@@ -20,7 +20,7 @@ function generatemultiplyArray(firstNumber,secondNumber){
         for(var j=0;j<(i+1);j++){
             //col
             var result = [];
-            var row = i+"*"+j+"="+i*j; 
+            var row = j+"*"+i+"="+i*j; 
             result.push(row);
         }
         generateArry.push(result);
@@ -29,7 +29,14 @@ function generatemultiplyArray(firstNumber,secondNumber){
 }
     
 function printMultiplyTable(generatemultiplyArray){
-    
+    var output = "";
+    for(var i=0;i<generatemultiplyArray.length;i++){
+        for(var j=0;j<generatemultiplyArray[i].length;j++){
+            output = output+generatemultiplyArray[i][j]+" ";
+        }
+        output += "\n";
+    }
+    return output;
 }
 
     module.exports = {
